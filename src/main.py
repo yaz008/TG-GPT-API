@@ -8,7 +8,6 @@ GPT: str = '@GPT_chat_robot'
 
 def callback(message: str) -> str:
     app.send_message(chat_id=GPT, text=message)
-    return 'Generating response...'
 
 @app.on_message(filters=None)
 def on_message(_: Client, message: Message) -> None:

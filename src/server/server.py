@@ -4,7 +4,7 @@ from typing import Callable
 from threading import Thread
 
 config: dict[str, str | int] = load_config(path='src\\server\\config.json')
-callback: Callable[[str], str] | None = None
+callback: Callable[[str], None] | None = None
 client: socket | None = None
 
 server: socket = socket(family=AddressFamily.AF_INET,
@@ -19,8 +19,7 @@ def receive() -> None:
         try:
             size: int = int(client.recv(16).decode(encoding='UTF-8'))
             message: str = client.recv(size).decode(encoding='UTF-8')
-            response: str = callback(message)
-            send(response)
+            callback(message)
         except Exception as e:
             client = None
             print(e)
