@@ -1,9 +1,11 @@
+from sys import path
+
 from server._utils import load_config
 from socket import socket, AddressFamily, SocketKind
 from typing import Callable
 from threading import Thread
 
-config: dict[str, str | int] = load_config(path='src\\server\\config.json')
+config: dict[str, str | int] = load_config(path=f'{path[0]}\\server\\config.json')
 callback: Callable[[str], None] | None = None
 client: socket | None = None
 
