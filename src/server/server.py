@@ -1,5 +1,4 @@
 from sys import path
-
 from server._utils import load_config
 from socket import socket, AddressFamily, SocketKind
 from typing import Callable
@@ -22,7 +21,7 @@ def receive() -> None:
             size: int = int(client.recv(16).decode(encoding='UTF-8'))
             message: str = client.recv(size).decode(encoding='UTF-8')
             callback(message)
-        except Exception as e:
+        except ConnectionResetError as e:
             client = None
             print(e)
             break
