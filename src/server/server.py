@@ -36,7 +36,7 @@ def accept() -> None:
 
 def send(message: str) -> None:
     global client
-    size: bytes = bytes(f'{len(message):16}', encoding='UTF-8')
     data: bytes = bytes(message, encoding='UTF-8')
+    size: bytes = bytes(f'{len(data):16}', encoding='UTF-8')
     client.send(size)
     client.send(data)
