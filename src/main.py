@@ -12,6 +12,8 @@ def callback(message: str) -> str:
 
 @app.on_message(filters=user(GPT))
 def on_message(_: Client, message: Message) -> None:
+    if message.photo is not None:
+        message.delete()
     server.send(message=message.text)
 
 if __name__ == '__main__':
