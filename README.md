@@ -25,6 +25,12 @@ Running `src/main.py` file will create a server listening on port `50027` (by de
 
 Connect your TCP client to the server to start using GPT
 
+### Recomended
+
+Create a task in [Task Sceduler](https://learn.microsoft.com/en-us/windows/win32/taskschd/task-scheduler-start-page) that will run the server indefinitely starting at user logon
+
+Thus, all projects that rely on this server will function correctly
+
 ## License
 
 TG-GPT-API is a free, open-source software distributed under the [MIT License](LICENSE.txt)
