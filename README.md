@@ -21,6 +21,8 @@ API_KEY="your-api-key"
 API_HASH="your-api-hash"
 ```
 
+**Note:** If you have no idea what `API_KEY` and `API_HASH` are, check out the official [Telegram Documentation](https://core.telegram.org/api/obtaining_api_id)
+
 ## Usage
 
 Running `src/main.py` file will create a server listening on port `50027` (by default)
