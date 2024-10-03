@@ -1,4 +1,4 @@
-# TG GPT API
+# TG-GPT-API
 
 ## Installation
 
@@ -27,4 +27,4 @@ Connect your TCP client to the server to start using GPT
 
 ## License
 
-TG GPT API is a free, open-source software distributed under the [MIT License](LICENSE.txt)
+TG-GPT-API is a free, open-source software distributed under the [MIT License](LICENSE.txt)
