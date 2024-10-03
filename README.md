@@ -8,7 +8,7 @@ Clone the repository
 git clone https://github.com/yaz008/TG-GPT-API.git
 ```
 
-Create Python virtual environment, activate it and run
+Create Python 3.10 virtual environment, activate it and run
 
 ```sh
 pip install -r requirements.txt
@@ -32,7 +32,7 @@ Running `src/main.py` file will create a server listening on port `50027` (by de
 1. 16 bytes header (message length)
 2. Message (in UTF-8)
 
-Connect your TCP client to the server to start using GPT
+Connect a TCP client to the server to start using GPT
 
 ### Testing
 
