@@ -14,6 +14,13 @@ Create Python virtual environment, activate it and run
 pip install -r requirements.txt
 ```
 
+Create `.env` file with the following environment variables
+
+```env
+API_KEY="your-api-key"
+API_HASH="your-api-hash"
+```
+
 ## Usage
 
 Running `src/main.py` file will create a server listening on port `50027` (by default)
