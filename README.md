@@ -18,10 +18,10 @@ pip install -r requirements.txt
 
 Running `src/main.py` file will create a server listening on port `50027` (by default)
 
-It follows a very simple protocol:
+**Protocol:**
 
--   message length in bytes is encoded into a string of length 16 and sent
--   the message itself is encoded and sent afterwards
+1. 16 bytes header (message length)
+2. Message (in UTF-8)
 
 Connect your TCP client to the server to start using GPT
 
