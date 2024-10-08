@@ -14,7 +14,8 @@ def callback(message: str) -> str:
 def on_message(_: Client, message: Message) -> None:
     if message.photo is not None:
         message.delete()
-    server.send(message=message.text)
+    else:
+        server.send(message=message.text)
 
 if __name__ == '__main__':
     server.callback = callback
