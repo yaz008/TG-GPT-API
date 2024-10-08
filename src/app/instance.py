@@ -8,4 +8,5 @@ if not load_dotenv():
 app: Client = Client(name='TG-GPT-API',
                      api_id=getenv(key='API_KEY'),
                      api_hash=getenv(key='API_HASH'),
+                     phone_number=getenv(key='PHONE_NUMBER'),
                      workdir=f'{path[0]}\\app\\__session__')
