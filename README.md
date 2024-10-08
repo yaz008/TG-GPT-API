@@ -19,6 +19,7 @@ Create `.env` file with the following environment variables
 ```env
 API_KEY="your-api-key"
 API_HASH="your-api-hash"
+PHONE_NUMBER="your-phone-number"
 ```
 
 **Note:** If you have no idea what `API_KEY` and `API_HASH` are, check out the official [Telegram Documentation](https://core.telegram.org/api/obtaining_api_id)
