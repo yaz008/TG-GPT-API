@@ -1,0 +1,1 @@
+from spam.filters import is_spam

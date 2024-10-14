@@ -4,6 +4,7 @@ from pyrogram.filters import user
 from pyrogram.types import Message
 from threading import Thread
 from server import server
+from spam import is_spam
 
 GPT: str = '@GPT_chat_robot'
 
@@ -12,7 +13,7 @@ def callback(message: str) -> str:
 
 @app.on_message(filters=user(GPT))
 def on_message(_: Client, message: Message) -> None:
-    if message.photo is not None:
+    if is_spam(message=message):
         message.delete()
     else:
         if message.text is not None:
